@@ -1,4 +1,4 @@
-const mangoose = require("mongoose");
+const mongoose = require("mongoose");
 
 const dbUrl =
   "mongodb+srv://<username>:<dip12345>@core-3.o1wxq.mongodb.net/<dip>?retryWrites=true&w=majority";
@@ -18,7 +18,7 @@ function establishConnection() {
       console.info("database connection established");
     })
     .catch((err) => {
-      console.log("database connection failed");
+      console.log("database connection failed", err);
       establishConnection();
     });
 }
